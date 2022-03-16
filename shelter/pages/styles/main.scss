@@ -1,0 +1,13 @@
+@import './abstracts/mixins';
+@import './abstracts/placeholders';
+@import './abstracts/variables';
+
+@import './base/normalize';
+@import './base/typography';
+
+@import './components/buttons';
+
+@import './layout/header';
+
+@import './pages/main-page';
+@import './pages/out-pets';
