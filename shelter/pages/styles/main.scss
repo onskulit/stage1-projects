@@ -8,9 +8,18 @@
 
 @import './components/logo';
 @import './components/buttons';
+@import './components/card-input';
 
+@import './layout/gradient';
 @import './layout/header';
 @import './layout/navigation';
+@import './layout/start-screen';
+@import './layout/about';
+@import './layout/our-friends';
+@import './layout/carousel';
+@import './layout/help';
+@import './layout/donation';
+@import './layout/footer';
 
 @import './pages/main-page';
 @import './pages/out-pets';

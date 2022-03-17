@@ -1,0 +1,13 @@
+.about__container {
+    @include flex($justify-content: center, $align-items: center);
+    @extend %padding-container;
+}
+
+.about__content {
+    width: 430px;
+    @include flex(25px, $flex-direction: column)
+}
+
+.about__img {
+    margin-right: 120px; 
+}

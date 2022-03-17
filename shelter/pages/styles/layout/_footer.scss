@@ -1,0 +1,22 @@
+.footer {
+    @extend %background-texture;
+}
+
+.footer__container {
+    padding-top: 40px;
+    @include flex($justify-content: space-between);
+}
+
+.footer__content {
+    @include flex(40px, $flex-direction: column);
+}
+
+.footer-item {
+    @include flex(20px, $align-items: center);
+    @include font(2rem, 23px, $color-primary);
+    @extend %letter-spacing;
+}
+
+.footer__section-title {
+    color: $color-light;
+}

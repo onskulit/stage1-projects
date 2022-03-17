@@ -1,0 +1,13 @@
+.help__container {
+    @extend %padding-container;
+    @include flex(60px, $flex-direction: column, $align-items: center);
+}
+
+.help__list {
+    padding: 0 87px;
+    @include flex($gap: 120px, $justify-content: space-around);
+}
+
+.help-item {
+    @include flex(30px, $flex-direction: column, $align-items: center, $justify-content: center);
+}

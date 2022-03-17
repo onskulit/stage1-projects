@@ -1,3 +1,40 @@
 .button {
     @include font(1.7rem, 22.1px, $color-dark-3xl);
+    @extend %letter-spacing;
+    border: 2px solid $color-primary;
+    @extend %transition;
+    cursor: pointer;
+
+    &-oval {
+        padding: 15px 45px;
+        border-radius: 100px;
+    }
+
+    &-round {
+        width: 52px; height: 52px;
+        @include font(2rem, 23px, $color-dark-3xl);
+        border-radius: 50%;
+    }
+
+    &-bordered {
+        background: transparent;
+    }
+
+    &-colored {
+        background: $color-primary;
+    }
+
+    &_inactive {
+        color: $color-dark-s;
+        border-color: $color-dark-s;
+    }
+
+    &_active {
+        background: $color-primary;
+    }
+
+    &:hover {
+        background: $color-secondary;
+        border: 2px solid $color-secondary;
+    }
 }

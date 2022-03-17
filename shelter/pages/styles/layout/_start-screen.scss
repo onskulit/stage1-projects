@@ -1,0 +1,9 @@
+.start-screen__container {
+    @include flex($justify-content: space-between);
+}
+
+.start-screen__content {
+    width: 460px;
+    margin-top: 163px;
+    @include flex($gap: 42px, $flex-direction: column);
+}

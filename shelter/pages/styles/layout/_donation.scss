@@ -1,0 +1,13 @@
+.donation {
+    @extend %background-grey;
+}
+
+.donation__container {
+    @extend %padding-container;
+    @include flex(30px, $justify-content: center, $align-items: center);
+}
+
+.donation__content {
+    width: 380px;
+    @include flex(20px, $flex-direction: column);
+}
