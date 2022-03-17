@@ -1,0 +1,31 @@
+html {
+    @include font(10px, 1.15);
+}
+
+.project-title {
+    @include font(4.4rem, 57.2px, $color-light);
+}
+
+.section-title {
+    @include font(3.5rem, 45.5px, $color-dark-l);
+}
+
+h3 {
+    @include font(2rem, 22.72px, $color-dark-l);
+}
+
+h4 {
+    @include font(2rem, 23px, $color-dark-l);
+}
+
+h5 {
+    @include font(1.5rem, 16.5px, $color-dark-l);
+}
+
+.content {
+    @include font(1.5rem, 160%, $color-dark-xl, $font-arial);
+}
+
+.footnote {
+    @include font(1.5rem, 160%, $color-dark-xl, $font-arial);
+}

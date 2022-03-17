@@ -1,13 +1,16 @@
+@import './abstracts/variables';
 @import './abstracts/mixins';
 @import './abstracts/placeholders';
-@import './abstracts/variables';
 
 @import './base/normalize';
+@import './base/custom-settings';
 @import './base/typography';
 
+@import './components/logo';
 @import './components/buttons';
 
 @import './layout/header';
+@import './layout/navigation';
 
 @import './pages/main-page';
 @import './pages/out-pets';

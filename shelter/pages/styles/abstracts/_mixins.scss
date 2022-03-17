@@ -1,0 +1,17 @@
+@mixin font ($size, $line-height, $color: black, $family: $font-georgia, $weight: 400, $style: normal) {
+    font-family: $family;
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $weight;
+    font-style: $style;
+    color: $color;
+}
+
+@mixin flex ($gap: inherit, $justify-content: start, $flex-direction: row, $align-items: flex-start) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+    flex-wrap: wrap;
+}
