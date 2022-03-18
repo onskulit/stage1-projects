@@ -5,9 +5,10 @@
 
 .help__list {
     padding: 0 87px;
-    @include flex($gap: 120px, $justify-content: space-around);
+    @include flex($gap: 55px, $justify-content: center);
 }
 
 .help-item {
+    width: 15%;
     @include flex(30px, $flex-direction: column, $align-items: center, $justify-content: center);
 }

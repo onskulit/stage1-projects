@@ -12,8 +12,12 @@
 }
 
 .pets {
-    @include flex($justify-content: center, $align-items: center);
-    gap: 40px;
+    @include flex(90px, $justify-content: center, $align-items: center);
+    
+    &_our-pets-page {
+        @include flex(30px, $justify-content: space-between);
+    }
+
 }
 
 .pet {
