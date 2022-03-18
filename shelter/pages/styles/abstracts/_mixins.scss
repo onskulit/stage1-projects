@@ -7,7 +7,7 @@
     color: $color;
 }
 
-@mixin flex ($gap: inherit, $justify-content: start, $flex-direction: row, $align-items: flex-start) {
+@mixin flex ($gap: 0px, $justify-content: start, $flex-direction: row, $align-items: flex-start) {
     display: flex;
     flex-direction: $flex-direction;
     justify-content: $justify-content;

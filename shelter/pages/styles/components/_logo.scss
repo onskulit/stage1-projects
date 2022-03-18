@@ -10,9 +10,17 @@
     @include font(3.2rem, 35.2px, $color-primary);
     @extend %letter-spacing;
     margin-bottom: 10px;
+
+    &_dark {
+        color: $color-dark-l;
+    }
 }
 
 .logo__subtitle {
     @include font(1.3rem, 15px, $color-light);
     letter-spacing: 0.1em;
+
+    &_dark {
+        color: $color-dark-l;
+    }
 }

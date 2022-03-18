@@ -8,7 +8,16 @@
 }
 
 .footer__content {
-    @include flex(40px, $flex-direction: column);
+    margin-top: 16px;
+    @include flex($flex-direction: column);
+
+    &_first {
+        gap: 40px;
+    }
+
+    &_second {
+        gap: 33px;
+    }
 }
 
 .footer-item {

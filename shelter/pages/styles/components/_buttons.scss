@@ -24,17 +24,25 @@
         background: $color-primary;
     }
 
-    &_inactive {
-        color: $color-dark-s;
-        border-color: $color-dark-s;
+    &:hover {
+        background: $color-secondary;
+        border: 2px solid $color-secondary;
     }
 
     &_active {
         background: $color-primary;
+        cursor: initial;
     }
 
-    &:hover {
-        background: $color-secondary;
-        border: 2px solid $color-secondary;
+    &_inactive {
+        color: $color-dark-s;
+        border-color: $color-dark-s;
+        cursor: initial;
+
+        &:hover {
+            color: $color-dark-s;
+            border-color: $color-dark-s;
+            background-color: transparent;
+        }
     }
 }
