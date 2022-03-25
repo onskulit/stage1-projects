@@ -12,8 +12,7 @@
 }
 
 .pets {
-    @include flex(90px, $justify-content: center, $align-items: center);
-    
+    @include flex(90px, $justify-content: center, $align-items: center, $wrap: nowrap);
     &_our-pets-page {
         @include flex(30px, $justify-content: space-between);
     }
@@ -29,6 +28,11 @@
 
     &:hover .pet__content  {
         background-color: $color-light;
+    }
+
+    &:hover button  {
+        background: $color-secondary;
+        border: 2px solid $color-secondary;
     }
 }
 

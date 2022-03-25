@@ -600,6 +600,12 @@ h5 {
   border-radius: 9px;
 }
 
+.header_sticky {
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+}
+
 .header__container {
   padding: 60px 0;
   display: flex;
@@ -716,7 +722,7 @@ h5 {
   justify-content: center;
   align-items: center;
   gap: 90px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .pets_our-pets-page {
   display: flex;
@@ -741,6 +747,10 @@ h5 {
 }
 .pet:hover .pet__content {
   background-color: #FFFFFF;
+}
+.pet:hover button {
+  background: #FDDCC4;
+  border: 2px solid #FDDCC4;
 }
 
 .pet__content {
