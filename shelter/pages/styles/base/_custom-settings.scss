@@ -9,6 +9,16 @@ body {
 
 .wrapper {
     padding: 0 40px;
+
+    @media (max-width: $desktop) {
+        padding: 0 30px;
+    }
+}
+
+.desktop_hidden {
+    @media (max-width: $desktop) {
+        display: none;
+    }
 }
 
 * {
@@ -29,6 +39,7 @@ h3 {
 
 h4 {
     margin: 0; padding: 0;
+    text-align: center;
 }
 
 h5 {

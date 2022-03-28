@@ -1,9 +1,33 @@
 .start-screen__container {
     @include flex($justify-content: space-between);
+
+    @media (max-width: $desktop) {
+        @include flex(100px, $justify-content: center, $flex-direction: center, $align-items: center);
+
+        & .start-screen__link {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.start-screen__button {
+    width: 207px;
 }
 
 .start-screen__content {
     width: 460px;
     margin-top: 163px;
     @include flex($gap: 42px, $flex-direction: column);
+
+    @media (max-width: $desktop) {
+        margin-top: 30px;
+    }
+}
+
+.start-screen__img {
+    @media (max-width: $desktop) {
+        width: 569px;
+        margin-left: 70px;
+    }
 }

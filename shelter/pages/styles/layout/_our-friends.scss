@@ -12,11 +12,18 @@
 }
 
 .pets {
-    @include flex(90px, $justify-content: center, $align-items: center, $wrap: nowrap);
-    &_our-pets-page {
-        @include flex(30px, $justify-content: space-between);
-    }
+    width: 100%;
+    @include flex(90px, $justify-content: center, $align-items: center);
 
+    &_our-pets-page {
+       gap: 30px;
+       $justify-content: space-between;
+    }
+    
+    @media (max-width: $desktop) {
+        gap: 40px;
+        justify-content: center;
+    }
 }
 
 .pet {
@@ -46,4 +53,14 @@
 
 .controllers {
     @include flex(20px, $justify-content: center);
+}
+
+.pets__button {
+    width: 260px;
+}
+
+.desktop_hidden {
+    @media (max-width: $desktop) {
+        display: none;
+    }
 }

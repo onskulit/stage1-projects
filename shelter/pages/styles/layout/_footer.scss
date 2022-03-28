@@ -5,17 +5,22 @@
 .footer__container {
     padding-top: 40px;
     @include flex($justify-content: space-between);
+
+    @media (max-width: $desktop) {
+        gap: 60px;
+        justify-content: center;
+    }
 }
 
 .footer__content {
     margin-top: 16px;
     @include flex($flex-direction: column);
 
-    &_first {
+    &_contacts {
         gap: 40px;
     }
 
-    &_second {
+    &_address {
         gap: 33px;
     }
 }

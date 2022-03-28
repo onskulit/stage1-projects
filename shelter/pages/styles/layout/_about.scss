@@ -1,13 +1,21 @@
 .about__container {
     @include flex($justify-content: center, $align-items: center);
     @extend %padding-container;
+
+    @media (max-width: $desktop) {
+        @include flex(80px, $flex-direction: column-reverse, $justify-content: center, $align-items: center);
+    }
 }
 
 .about__content {
     width: 430px;
-    @include flex(25px, $flex-direction: column)
+    @include flex(25px, $flex-direction: column);
 }
 
 .about__img {
     margin-right: 120px; 
+
+    @media (max-width: $desktop) {
+        margin-right: 0;
+    }
 }

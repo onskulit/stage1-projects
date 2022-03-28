@@ -1,4 +1,5 @@
 .button {
+    height: 52px;
     @include font(1.7rem, 22.1px, $color-dark-3xl);
     @extend %letter-spacing;
     border: 2px solid $color-primary;
@@ -11,7 +12,7 @@
     }
 
     &-round {
-        width: 52px; height: 52px;
+        width: 52px; 
         @include font(2rem, 23px, $color-dark-3xl);
         border-radius: 50%;
     }

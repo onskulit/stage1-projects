@@ -5,6 +5,11 @@
 .donation__container {
     @extend %padding-container;
     @include flex(30px, $justify-content: center, $align-items: center);
+
+    @media (max-width: $desktop) {
+        gap: 60px;
+        flex-direction: column-reverse;
+    }
 }
 
 .donation__content {
