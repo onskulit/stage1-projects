@@ -7,6 +7,11 @@ body {
     margin: 0 auto;
 }
 
+.container {
+    position: relative;
+    overflow-x: hidden;
+}
+
 .wrapper {
     padding: 0 40px;
 
