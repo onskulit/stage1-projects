@@ -5,11 +5,21 @@
     @media (max-width: $desktop) {
         @include flex(80px, $flex-direction: column-reverse, $justify-content: center, $align-items: center);
     }
+
+    @media (max-width: $tablet) {
+        gap: 42px;
+    }
 }
 
 .about__content {
     width: 430px;
     @include flex(25px, $flex-direction: column);
+
+    @media (max-width: $tablet) {
+        width: 300px;
+        align-items: center;
+        padding: 0 15px;
+    }
 }
 
 .about__img {
@@ -17,5 +27,9 @@
 
     @media (max-width: $desktop) {
         margin-right: 0;
+    }
+
+    @media (max-width: $tablet) {
+        width: 260px;
     }
 }

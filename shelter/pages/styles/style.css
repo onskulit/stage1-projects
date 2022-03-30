@@ -13,6 +13,11 @@
 .donation__container, .help__container, .our-friends__container, .about__container {
   padding: 80px 0 100px 0;
 }
+@media (max-width: 768px) {
+  .donation__container, .help__container, .our-friends__container, .about__container {
+    padding: 42px 0 42px 0;
+  }
+}
 
 .footer-item, .card-input, .button, .logo__title, h5, h4, h3, .section-title {
   letter-spacing: 0.06em;
@@ -374,6 +379,11 @@ body {
     padding: 0 30px;
   }
 }
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+}
 
 @media (max-width: 1280px) {
   .desktop_hidden {
@@ -421,7 +431,7 @@ a {
 }
 
 html {
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 10px;
   line-height: 1.15;
   font-weight: 400;
@@ -431,16 +441,24 @@ html {
 
 .project-title {
   width: 310px;
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 4.4rem;
   line-height: 57.2px;
   font-weight: 400;
   font-style: normal;
   color: #FFFFFF;
 }
+@media (max-width: 768px) {
+  .project-title {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+  }
+}
 
 .section-title {
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 3.5rem;
   line-height: 45.5px;
   font-weight: 400;
@@ -450,9 +468,16 @@ html {
 .section-title_center {
   text-align: center;
 }
+@media (max-width: 768px) {
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 32px;
+  }
+}
 
 h3 {
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
   line-height: 22.72px;
   font-weight: 400;
@@ -461,24 +486,36 @@ h3 {
 }
 
 h4 {
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
   line-height: 23px;
   font-weight: 400;
   font-style: normal;
   color: #545454;
 }
+@media (max-width: 768px) {
+  h4 {
+    font-size: 1.5rem;
+    line-height: 17px;
+  }
+}
 
 h5 {
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.5rem;
   line-height: 16.5px;
   font-weight: 400;
   font-style: normal;
   color: #545454;
 }
+@media (max-width: 768px) {
+  h5 {
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+}
 
-.content {
+.text {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   line-height: 160%;
@@ -486,11 +523,19 @@ h5 {
   font-style: normal;
   color: black;
 }
-.content-light {
+.text-light {
   color: #CDCDCD;
 }
-.content-dark {
+.text-dark {
   color: #4C4C4C;
+}
+@media (max-width: 768px) {
+  .text {
+    text-align: center;
+  }
+  .text_justified {
+    text-align: justify;
+  }
 }
 
 .footnote {
@@ -500,6 +545,12 @@ h5 {
   font-weight: 400;
   font-style: italic;
   color: #B2B2B2;
+}
+@media (max-width: 768px) {
+  .footnote {
+    padding: 0 10px;
+    text-align: justify;
+  }
 }
 
 .no-spacing {
@@ -520,7 +571,7 @@ h5 {
 }
 
 .logo__title {
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 3.2rem;
   line-height: 35.2px;
   font-weight: 400;
@@ -533,7 +584,7 @@ h5 {
 }
 
 .logo__subtitle {
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.3rem;
   line-height: 15px;
   font-weight: 400;
@@ -547,9 +598,9 @@ h5 {
 
 .button {
   height: 52px;
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.7rem;
-  line-height: 22.1px;
+  line-height: 22px;
   font-weight: 400;
   font-style: normal;
   color: #292929;
@@ -562,7 +613,7 @@ h5 {
 }
 .button-round {
   width: 52px;
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
   line-height: 23px;
   font-weight: 400;
@@ -597,8 +648,9 @@ h5 {
 
 .card-input {
   width: 349px;
+  height: 43px;
   padding: 10px 15px;
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
   line-height: 23px;
   font-weight: 400;
@@ -610,6 +662,13 @@ h5 {
   background-color: #F1CDB3;
   border: none;
   border-radius: 9px;
+}
+@media (max-width: 768px) {
+  .card-input {
+    width: 281px;
+    font-size: 15px;
+    line-height: 16.5px;
+  }
 }
 
 .header_sticky {
@@ -652,6 +711,11 @@ h5 {
   gap: 0px;
   flex-wrap: wrap;
   list-style: none;
+}
+@media (max-width: 768px) {
+  .nav__list {
+    display: none;
+  }
 }
 
 .nav__item {
@@ -701,10 +765,6 @@ h5 {
   }
 }
 
-.start-screen__button {
-  width: 207px;
-}
-
 .start-screen__content {
   width: 460px;
   margin-top: 163px;
@@ -720,11 +780,22 @@ h5 {
     margin-top: 30px;
   }
 }
+@media (max-width: 768px) {
+  .start-screen__content {
+    align-items: center;
+  }
+}
 
 @media (max-width: 1280px) {
   .start-screen__img {
     width: 569px;
     margin-left: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .start-screen__img {
+    width: 260px;
+    margin-left: 40px;
   }
 }
 
@@ -746,6 +817,11 @@ h5 {
     flex-wrap: wrap;
   }
 }
+@media (max-width: 768px) {
+  .about__container {
+    gap: 42px;
+  }
+}
 
 .about__content {
   width: 430px;
@@ -756,6 +832,13 @@ h5 {
   gap: 25px;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  .about__content {
+    width: 300px;
+    align-items: center;
+    padding: 0 15px;
+  }
+}
 
 .about__img {
   margin-right: 120px;
@@ -763,6 +846,11 @@ h5 {
 @media (max-width: 1280px) {
   .about__img {
     margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .about__img {
+    width: 260px;
   }
 }
 
@@ -776,6 +864,11 @@ h5 {
 }
 .our-friends__container_our-pets-page {
   gap: 45px;
+}
+@media (max-width: 768px) {
+  .our-friends__container {
+    gap: 42px;
+  }
 }
 
 .pets {
@@ -837,13 +930,34 @@ h5 {
   gap: 20px;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  .controllers {
+    gap: 10px;
+  }
+}
 
-.pets__button {
-  width: 260px;
+.tablet-controllers {
+  display: none;
+}
+@media (max-width: 768px) {
+  .tablet-controllers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 1280px) {
   .desktop_hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .tablet_hidden {
     display: none;
   }
 }
@@ -855,7 +969,17 @@ h5 {
   justify-content: space-between;
   align-items: center;
   gap: 0px;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
+}
+@media (max-width: 768px) {
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 }
 
 .help__container {
@@ -878,12 +1002,19 @@ h5 {
 }
 @media (max-width: 1280px) {
   .help__list {
+    padding: 0 39px;
     justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  .help__list {
+    padding: 0 5px;
+    gap: 30px;
   }
 }
 
 .help-item {
-  width: 15%;
+  width: 15.7%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -893,7 +1024,13 @@ h5 {
 }
 @media (max-width: 1280px) {
   .help-item {
-    width: 26.4%;
+    width: 170px;
+  }
+}
+@media (max-width: 768px) {
+  .help-item {
+    gap: 20px;
+    width: 130px;
   }
 }
 
@@ -911,6 +1048,11 @@ h5 {
     flex-direction: column-reverse;
   }
 }
+@media (max-width: 768px) {
+  .donation__container {
+    gap: 42px;
+  }
+}
 
 .donation__content {
   width: 380px;
@@ -920,6 +1062,18 @@ h5 {
   align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .donation__content {
+    width: 300px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .donation__img {
+    width: 260px;
+  }
 }
 
 .footer__container {
@@ -935,6 +1089,13 @@ h5 {
   .footer__container {
     gap: 60px;
     justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
   }
 }
 
@@ -953,6 +1114,11 @@ h5 {
 .footer__content_address {
   gap: 33px;
 }
+@media (max-width: 768px) {
+  .footer__content {
+    align-items: center;
+  }
+}
 
 .footer-item {
   display: flex;
@@ -961,7 +1127,7 @@ h5 {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
   line-height: 23px;
   font-weight: 400;
@@ -970,7 +1136,14 @@ h5 {
 }
 
 .footer__section-title {
+  width: 280px;
   color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .footer__image {
+    width: 260px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

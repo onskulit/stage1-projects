@@ -5,6 +5,13 @@ html {
 .project-title {
     width: 310px;
     @include font(4.4rem, 57.2px, $color-light);
+
+    @media (max-width: $tablet) {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 32px;
+        letter-spacing: $letter-spacing;
+    }
 }
 
 .section-title {
@@ -13,6 +20,12 @@ html {
 
     &_center {
         text-align: center;
+    }
+
+    @media (max-width: $tablet) {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 32px;
     }
 }
 
@@ -24,14 +37,24 @@ h3 {
 h4 {
     @include font(2rem, 23px, $color-dark-l);
     @extend %letter-spacing;
+
+    @media (max-width: $tablet) {
+        font-size: 1.5rem;
+        line-height: 17px;
+    }
 }
 
 h5 {
     @include font(1.5rem, 16.5px, $color-dark-l);
     @extend %letter-spacing;
+
+    @media (max-width: $tablet) {
+        line-height: 24px;
+        letter-spacing: 0;
+    }
 }
 
-.content {
+.text {
     @include font(1.5rem, 160%, $family: $font-arial);
 
     &-light {
@@ -41,10 +64,23 @@ h5 {
     &-dark {
         color: $color-dark-xl;
     }
+
+    @media (max-width: $tablet) {
+        text-align: center;
+
+        &_justified {
+            text-align: justify;
+        }
+    }
 }
 
 .footnote {
     @include font(1.2rem, 18px, $color-dark-m, $font-arial, $style: italic);
+
+    @media (max-width: $tablet) {
+        padding: 0 10px;
+        text-align: justify;
+    }
 }
 
 .no-spacing {

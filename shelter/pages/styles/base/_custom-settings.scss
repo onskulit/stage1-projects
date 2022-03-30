@@ -13,6 +13,10 @@ body {
     @media (max-width: $desktop) {
         padding: 0 30px;
     }
+
+    @media (max-width: $tablet) {
+        padding: 0 10px;
+    }
 }
 
 .desktop_hidden {

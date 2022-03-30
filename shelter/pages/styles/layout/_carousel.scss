@@ -1,4 +1,8 @@
 .carousel {
     width: 100%;
-    @include flex($justify-content: space-between, $align-items: center, $wrap: no-wrap);
+    @include flex($justify-content: space-between, $align-items: center, $wrap: nowrap);
+
+    @media (max-width: $tablet) {
+        @include flex(20px, $align-items: center, $flex-direction: column);
+    }
 }

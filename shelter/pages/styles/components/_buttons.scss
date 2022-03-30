@@ -1,6 +1,6 @@
 .button {
     height: 52px;
-    @include font(1.7rem, 22.1px, $color-dark-3xl);
+    @include font(1.7rem, 22px, $color-dark-3xl);
     @extend %letter-spacing;
     border: 2px solid $color-primary;
     @extend %transition;

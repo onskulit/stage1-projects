@@ -11,11 +11,13 @@ $color-light-l: #F6F6F6;
 $color-light-s: #FAFAFA;
 $color-background: #F6F6F6;
 
-$font-georgia: 'Georgia, "Times New Roman", Times, serif';
+$font-georgia: Georgia, "Times New Roman", Times, serif;
 $font-arial: Arial, Helvetica, sans-serif;
 
 $light-transition: .3s;
 
+$letter-spacing: 0.06em;
+
 $desktop: 1280px;
-$tablet: 780px;
+$tablet: 768px;
 $mobile: 320px;

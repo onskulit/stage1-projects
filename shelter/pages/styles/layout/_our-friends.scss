@@ -9,6 +9,10 @@
     &_our-pets-page {
         gap: 45px;
     }
+
+    @media (max-width: $tablet) {
+        gap: 42px;
+    }
 }
 
 .pets {
@@ -53,14 +57,28 @@
 
 .controllers {
     @include flex(20px, $justify-content: center);
+
+    @media (max-width: $tablet) {
+        gap: 10px;
+    }
 }
 
-.pets__button {
-    width: 260px;
+.tablet-controllers {
+    display: none;
+
+    @media (max-width: $tablet) {
+        @include flex(80px, $justify-content: center);
+    }
 }
 
 .desktop_hidden {
     @media (max-width: $desktop) {
+        display: none;
+    }
+}
+
+.tablet_hidden {
+    @media (max-width: $tablet) {
         display: none;
     }
 }

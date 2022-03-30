@@ -13,8 +13,12 @@
 
 %padding-container {
     padding: 80px 0 100px 0;
+
+    @media (max-width: $tablet) {
+        padding: 42px 0 42px 0;
+    }
 }
 
 %letter-spacing {
-    letter-spacing: 0.06em;
+    letter-spacing: $letter-spacing;
 }

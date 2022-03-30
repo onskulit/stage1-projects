@@ -1,5 +1,6 @@
 .card-input {
     width: 349px;
+    height: 43px;
     padding: 10px 15px;
     @include font(2rem, 23px, $color-dark-l);
     text-align: end;
@@ -9,4 +10,10 @@
     background-color: $color-primary;
     border: none;
     border-radius: 9px;
+
+    @media (max-width: $tablet) {
+        width: 281px;
+        font-size: 15px;
+        line-height: 16.5px;
+    }
 }
