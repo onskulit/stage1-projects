@@ -6,7 +6,7 @@
   background-color: #F6F6F6;
 }
 
-.pet__content, .nav__link, .button {
+.pet__content, .pets, .nav__link, .button {
   transition: 0.3s;
 }
 
@@ -982,6 +982,10 @@ h5 {
 .pet:hover button {
   background: #FDDCC4;
   border: 2px solid #FDDCC4;
+}
+
+.pet__cover {
+  height: 270px;
 }
 
 .pet__content {
