@@ -3,11 +3,6 @@
 
     @media (max-width: $desktop) {
         @include flex(100px, $justify-content: center, $flex-direction: center, $align-items: center);
-
-        & .start-screen__link {
-            width: 100%;
-            text-align: center;
-        }
     }
 }
 

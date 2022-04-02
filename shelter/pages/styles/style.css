@@ -390,12 +390,6 @@ body {
   }
 }
 
-@media (max-width: 1280px) {
-  .desktop_hidden {
-    display: none;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -842,10 +836,6 @@ h5 {
     align-items: center;
     gap: 100px;
     flex-wrap: wrap;
-  }
-  .start-screen__container .start-screen__link {
-    width: 100%;
-    text-align: center;
   }
 }
 

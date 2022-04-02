@@ -24,12 +24,6 @@ body {
     }
 }
 
-.desktop_hidden {
-    @media (max-width: $desktop) {
-        display: none;
-    }
-}
-
 * {
     box-sizing: border-box;
 }
