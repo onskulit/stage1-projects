@@ -112,3 +112,37 @@ const preloadImages = () => {
 };
 
 preloadImages();
+
+
+// credit card input validation
+
+const creditInput = document.querySelector('.card-input');
+
+creditInput.addEventListener('keydown', function validateCreditCard(e) {
+    const notNumbers = [192, 189, 187, 219, 221, 220, 186, 222, 188, 190, 191]
+        
+    if ((e.keyCode >= 65 && e.keyCode <= 90) || notNumbers.includes(e.keyCode)) {
+        e.preventDefault();
+    }
+
+    if (window.getSelection) {
+        creditInput.value.replace(new RegExp(window.getSelection().toString()), e.key);
+    }
+
+    if ((e.keyCode === 8 || e.keyCode === 46) && creditInput.value.length) {
+        if (window.getSelection) {
+            creditInput.value.replace(new RegExp(window.getSelection().toString()), '');
+        } else {
+            creditInput.value.slice(0, -1);
+        }
+    } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)) {
+        e.preventDefault();
+        creditInput.value += e.key;
+
+        if (creditInput.value.length === 4 || creditInput.value.length === 9 || creditInput.value.length === 14 || creditInput.value.length === 19) {
+            creditInput.value += ' ';
+        }
+        
+        if (creditInput.value.length > 24) return;
+    }
+})
