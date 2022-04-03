@@ -44,7 +44,7 @@ backdrop.addEventListener('click', () => {
     if (modalWindow.classList.contains('active')) closeModalWindow();
 });
 
-// pet creation
+// pets creation
 
 let uniquePetIndexes = [4, 0, 2];
 
@@ -169,8 +169,6 @@ const preloadImages = () => {
 };
 
 preloadImages();
-
-export default {createPetBlock, updatePets, updateUniqueIndexes, createModalWindow, openModalWindow, closeModalWindow}
 
 // credit card input validation
 /* 

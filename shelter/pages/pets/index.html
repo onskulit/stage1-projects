@@ -120,11 +120,33 @@
                             <button class="button button-round button-bordered button_inactive button_prev-prev">&lt;&lt;</button>
                             <button class="button button-round button-bordered button_inactive button_prev">&lt;</button>
                             <button class="button button-round button_active">1</button>
-                            <button class="button button-round button-bordered button_prev">&gt;</button>
+                            <button class="button button-round button-bordered button_next">&gt;</button>
                             <button class="button button-round button-bordered button_next-next">&gt;&gt;</button> <!--Maybe &#10142;-->  
                         </div>
                     </div>
                 </div>
+                <div class="modal">
+                    <div class="modal__container">
+                        <div class="modal__cover">
+                            <img src="../../assets/images/our-friends/pets-jennifer.png" alt="Jennifer" class="modal__img">
+                        </div>
+                        <div class="modal__content-container">
+                            <div class="modal__content">
+                                <div class="modal-head">
+                                    <h2 class="modal-head__title" data-modal="name"></h2>
+                                    <h4 class="modal-head__subtitle"><span data-modal="type"></span> - <span data-modal="breed"></span></h4>
+                                </div>
+                                <p class="modal__text" data-modal="description"></p>
+                                <ul class="modal-list">
+                                    <li class="modal-list__item"><span class="modal-list__text"><b>Age: </b><span data-modal="age"></span></span></li>
+                                    <li class="modal-list__item"><span class="modal-list__text"><b>Inoculations: </b><span data-modal="inoculations"></span></span></li>
+                                    <li class="modal-list__item"><span class="modal-list__text"><b>Diseases: </b><span data-modal="diseases"></span></span></li>
+                                    <li class="modal-list__item"><span class="modal-list__text"><b>Parasites: </b><span data-modal="parasites"></span></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="button button-round button-bordered modal__close-button">&#10006;</button>
+                    </div>
             </section>
         </main>
         <footer class="footer" id="footer">
