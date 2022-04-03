@@ -12,15 +12,13 @@
         height: 807px;
         padding: 248px 0 0 0;
         z-index: 2;
-        display: flex;
         flex-direction: column;
-        justify-content: start;
         align-items: center;
         gap: 40px;
         font-size: 32px;
         line-height: 51px;
         background-color: $color-dark-3xl;
-        transition: 0.5s;
+        transition: $mid-transition;
     }
 
     @media (max-width: $mobile) {
@@ -68,7 +66,7 @@
 }
 
 .nav__link {
-    @extend %transition;
+    transition: $light-transition;
 }
 
 .hamburger {

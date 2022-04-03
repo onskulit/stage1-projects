@@ -4,7 +4,7 @@
     padding: 10px 15px;
     @include font(2rem, 23px, $color-dark-l);
     text-align: end;
-    @extend %letter-spacing;
+    letter-spacing: $letter-spacing;
     background: url(/assets/icons/credit-card.svg) no-repeat;
     background-position: 15px 10px;
     background-color: $color-primary;

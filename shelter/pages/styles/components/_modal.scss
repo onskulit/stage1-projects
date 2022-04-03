@@ -1,0 +1,122 @@
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    @include flex($justify-content: center, $align-items: center, $wrap: nowrap);
+    transition: $mid-transition;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal.active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.modal__container {
+    position: relative;
+    width: 900px;
+    height: 500px;
+    background-color: $color-light-s;
+    @include flex($justify-content: space-between, $wrap: nowrap);
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    border-radius: 9px;
+
+    @media (max-width: $desktop) {
+        width: 630px;
+        height: 350px;
+    }
+
+    @media (max-width: $tablet) {
+        width: 240px;
+        height: auto;
+    }
+}
+
+.modal__img {
+    width: 500px;
+    height: 500px;
+
+    @media (max-width: $desktop) {
+        width: 350px;
+        height: 350px;
+    }
+
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.modal__content {
+    width: 351px;
+    margin: 50px 20px 0 0;
+    @include flex(40px, $flex-direction: column);
+
+    @media (max-width: $desktop) {
+        margin: 10px 9px 0 0;
+        gap: 20px;
+    }
+
+    @media (max-width: $tablet) {
+        margin: 0;
+        padding: 10px;
+        gap: 22px;
+    }
+}
+
+.modal-head {
+    &__title {
+        @include font(3.5rem, 45.5px);
+        letter-spacing: $letter-spacing;
+    }
+
+    &__subtitle {
+        @include font(2rem, 23px);
+        letter-spacing: $letter-spacing;
+    }
+
+    @media (max-width: $tablet) {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.modal__text {
+    @include font(1.5rem, 16.5px);
+    letter-spacing: $letter-spacing;
+
+    @media (max-width: $desktop) {
+        font-size: 1.3rem;
+        line-height: 14px;
+    }
+
+    @media (max-width: $tablet) {
+        text-align: justify;
+    }
+}
+
+.modal-list {
+    padding: 0 0 0 15px;
+    @include font(1.5rem, 16.5px, $color-primary);
+    letter-spacing: $letter-spacing;
+
+    &__item {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        color: black;
+    }
+}
+
+.modal__close-button {
+    position: absolute;
+    top: -52px;
+    right: -42px;
+
+    @media (max-width: $tablet) {
+        right: -32px;
+    }
+}

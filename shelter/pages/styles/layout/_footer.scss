@@ -38,7 +38,7 @@
 .footer-item {
     @include flex(20px, $align-items: center);
     @include font(2rem, 23px, $color-primary);
-    @extend %letter-spacing;
+    letter-spacing: $letter-spacing;
 }
 
 .footer__section-title {
