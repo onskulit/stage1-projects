@@ -673,7 +673,7 @@ h5 {
   font-style: normal;
   color: #545454;
   text-align: end;
-  background: url(../../../assets/icons/credit-card.svg) no-repeat;
+  background: url(/assets/icons/credit-card.svg) no-repeat;
   background-position: 15px 10px;
   background-color: #F1CDB3;
   border: none;
@@ -1075,7 +1075,7 @@ h5 {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 55px;
+  gap: 48px;
   flex-wrap: wrap;
 }
 @media (max-width: 1280px) {
@@ -1092,13 +1092,13 @@ h5 {
 }
 
 .help-item {
-  width: 15.7%;
+  width: 16.2%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 @media (max-width: 1280px) {
   .help-item {

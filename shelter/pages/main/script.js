@@ -101,6 +101,8 @@ nextBtns.forEach(btn => {
     btn.addEventListener('click', updatePets);
 })
 
+// modal window
+
 
 // image preload
 
@@ -113,9 +115,8 @@ const preloadImages = () => {
 
 preloadImages();
 
-
 // credit card input validation
-
+/* 
 const creditInput = document.querySelector('.card-input');
 
 creditInput.addEventListener('keydown', function validateCreditCard(e) {
@@ -145,4 +146,4 @@ creditInput.addEventListener('keydown', function validateCreditCard(e) {
         
         if (creditInput.value.length > 24) return;
     }
-})
+}) */
