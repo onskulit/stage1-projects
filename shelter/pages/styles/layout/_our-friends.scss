@@ -38,6 +38,7 @@
     border-radius: 9px;
     overflow: hidden;
     background-color: $color-light-s;
+    cursor: pointer;
 
     &:hover .pet__content  {
         background-color: $color-light;

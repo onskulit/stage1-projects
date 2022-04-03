@@ -8,6 +8,17 @@ const petsContainer = document.querySelector('.pets');
 const prevBtns = document.querySelectorAll('.button_prev');
 const nextBtns = document.querySelectorAll('.button_next');
 
+const modalWindow = document.querySelector('.modal');
+const modalWindowCloseBtn = document.querySelector('.modal__close-button');
+
+document.addEventListener('DOMContentLoaded', () => {
+    petsContainer.innerHTML = '';
+
+    createPetBlock(pets[4]);
+    createPetBlock(pets[0]).classList.add('desktop_hidden');
+    createPetBlock(pets[2]).classList.add('tablet_hidden');
+})
+
 // adaptive menu creation
 
 const closeHamburgerMenu = () => {
@@ -29,14 +40,15 @@ navigation.addEventListener('click', (event) => {
 });
 
 backdrop.addEventListener('click', () => {
-    closeHamburgerMenu();
+    if (navigation.classList.contains('adaptive-menu')) closeHamburgerMenu();
+    if (modalWindow.classList.contains('active')) closeModalWindow();
 });
 
 // pet creation
 
 let uniquePetIndexes = [4, 0, 2];
 
-const createPetBlock = (pet, index) => {
+const createPetBlock = (pet) => {
     const petBlock = document.createElement('div');
     petBlock.classList.add('pet');
     petsContainer.append(petBlock);
@@ -64,17 +76,19 @@ const createPetBlock = (pet, index) => {
     petButton.textContent = 'Learn more';
     petContent.append(petButton);
 
+    petBlock.setAttribute('pet-id', pets.indexOf(pet));
     return petBlock;
 }
 
 
 const updatePets = () => {
     petsContainer.innerHTML = '';
+
     updateUniqueIndexes(3, pets.length);
 
-    createPetBlock(pets[uniquePetIndexes[0]], uniquePetIndexes[0]);
-    createPetBlock(pets[uniquePetIndexes[1]], uniquePetIndexes[1]).classList.add('desktop_hidden')
-    createPetBlock(pets[uniquePetIndexes[2]], uniquePetIndexes[2]).classList.add('tablet_hidden');
+    createPetBlock(pets[uniquePetIndexes[0]]);
+    createPetBlock(pets[uniquePetIndexes[1]]).classList.add('desktop_hidden');
+    createPetBlock(pets[uniquePetIndexes[2]]).classList.add('tablet_hidden');
 }
 
 const updateUniqueIndexes = (requiredLength, arrLength) => {
@@ -103,6 +117,47 @@ nextBtns.forEach(btn => {
 
 // modal window
 
+petsContainer.addEventListener('click', (e) => {
+    if (e.target.closest('.pet')) {
+        createModalWindow(e.target.closest('.pet'));
+        openModalWindow();
+    }
+})
+
+modalWindow.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+        closeModalWindow();
+    }
+})
+
+const createModalWindow = (pet) => {
+    const petId = pet.getAttribute('pet-id');
+    const modalElements = document.querySelectorAll('[data-modal]');
+    const modalImg = document.querySelector('.modal__img');
+    modalImg.src = pets[petId]['img'];
+
+    modalElements.forEach((elem) => {
+        let data = pets[petId][elem.dataset.modal];
+
+        if (Array.isArray(data)) {
+            data = data.join(', ');
+        }
+
+        elem.textContent = data;
+    })
+}
+
+const openModalWindow = () => {
+    modalWindow.classList.add('active');
+    backdrop.classList.add('active');
+}
+
+const closeModalWindow = () => {
+    modalWindow.classList.remove('active');
+    backdrop.classList.remove('active');
+}
+
+modalWindowCloseBtn.addEventListener('click', closeModalWindow);
 
 // image preload
 
@@ -114,6 +169,8 @@ const preloadImages = () => {
 };
 
 preloadImages();
+
+export default {createPetBlock, updatePets, updateUniqueIndexes, createModalWindow, openModalWindow, closeModalWindow}
 
 // credit card input validation
 /* 

@@ -696,6 +696,7 @@ h5 {
 
 .modal {
   position: absolute;
+  z-index: 2;
   top: 0;
   left: 0;
   bottom: 0;
@@ -706,17 +707,19 @@ h5 {
   align-items: center;
   gap: 0px;
   flex-wrap: nowrap;
-  transition: 0.5s;
+  transition: 0.3s;
   opacity: 0;
   pointer-events: none;
 }
 
 .modal.active {
+  cursor: pointer;
   pointer-events: all;
   opacity: 1;
 }
 
 .modal__container {
+  cursor: default;
   position: relative;
   width: 900px;
   height: 500px;
@@ -743,6 +746,11 @@ h5 {
   }
 }
 
+.modal__cover {
+  border-radius: 9px;
+  overflow: hidden;
+}
+
 .modal__img {
   width: 500px;
   height: 500px;
@@ -759,6 +767,14 @@ h5 {
   }
 }
 
+.modal__content-container {
+  height: 100%;
+  overflow-y: scroll;
+}
+.modal__content-container::-webkit-scrollbar {
+  display: none;
+}
+
 .modal__content {
   width: 351px;
   margin: 50px 20px 0 0;
@@ -771,18 +787,23 @@ h5 {
 }
 @media (max-width: 1280px) {
   .modal__content {
+    width: 260px;
     margin: 10px 9px 0 0;
     gap: 20px;
   }
 }
 @media (max-width: 767px) {
   .modal__content {
+    width: 100%;
     margin: 0;
     padding: 10px;
     gap: 22px;
   }
 }
 
+.modal-head {
+  width: 100%;
+}
 .modal-head__title {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 3.5rem;
@@ -800,10 +821,15 @@ h5 {
   font-style: normal;
   color: black;
   letter-spacing: 0.06em;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .modal-head__subtitle {
+    text-align: center;
+  }
 }
 @media (max-width: 767px) {
   .modal-head {
-    width: 100%;
     text-align: center;
   }
 }
@@ -1152,6 +1178,7 @@ h5 {
   border-radius: 9px;
   overflow: hidden;
   background-color: #FAFAFA;
+  cursor: pointer;
 }
 .pet:hover .pet__content {
   background-color: #FFFFFF;
