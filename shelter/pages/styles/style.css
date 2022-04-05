@@ -371,7 +371,7 @@ body {
 .wrapper {
   padding: 0 40px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .wrapper {
     padding: 0 30px;
   }
@@ -733,7 +733,7 @@ h5 {
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   border-radius: 9px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .modal__container {
     width: 630px;
     height: 350px;
@@ -755,7 +755,7 @@ h5 {
   width: 500px;
   height: 500px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .modal__img {
     width: 350px;
     height: 350px;
@@ -785,7 +785,7 @@ h5 {
   gap: 40px;
   flex-wrap: wrap;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .modal__content {
     width: 260px;
     margin: 10px 9px 0 0;
@@ -843,7 +843,7 @@ h5 {
   color: black;
   letter-spacing: 0.06em;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .modal__text {
     font-size: 1.3rem;
     line-height: 14px;
@@ -899,7 +899,7 @@ h5 {
   gap: 0px;
   flex-wrap: wrap;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .header__container {
     padding: 30px 0;
   }
@@ -1026,7 +1026,7 @@ h5 {
   gap: 0px;
   flex-wrap: wrap;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .start-screen__container {
     display: flex;
     flex-direction: center;
@@ -1047,7 +1047,7 @@ h5 {
   gap: 42px;
   flex-wrap: wrap;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .start-screen__content {
     margin-top: 30px;
   }
@@ -1058,7 +1058,7 @@ h5 {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .start-screen__img {
     width: 569px;
     margin-left: 70px;
@@ -1079,7 +1079,7 @@ h5 {
   gap: 0px;
   flex-wrap: wrap;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .about__container {
     display: flex;
     flex-direction: column-reverse;
@@ -1115,7 +1115,7 @@ h5 {
 .about__img {
   margin-right: 120px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .about__img {
     margin-right: 0;
   }
@@ -1160,7 +1160,7 @@ h5 {
 .pets_our-pets-page {
   gap: 30px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .pets {
     gap: 40px;
     justify-content: center;
@@ -1233,7 +1233,7 @@ h5 {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .desktop_hidden {
     display: none;
   }
@@ -1283,7 +1283,7 @@ h5 {
   gap: 48px;
   flex-wrap: wrap;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .help__list {
     padding: 0 39px;
     justify-content: space-between;
@@ -1305,7 +1305,7 @@ h5 {
   gap: 30px;
   flex-wrap: nowrap;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .help-item {
     width: 170px;
   }
@@ -1325,7 +1325,7 @@ h5 {
   gap: 30px;
   flex-wrap: wrap;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .donation__container {
     gap: 60px;
     flex-direction: column-reverse;
@@ -1368,7 +1368,7 @@ h5 {
   gap: 0px;
   flex-wrap: wrap;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .footer__container {
     gap: 60px;
     justify-content: center;

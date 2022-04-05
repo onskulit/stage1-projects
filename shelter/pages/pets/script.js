@@ -14,6 +14,16 @@ const lastBtn = document.querySelector('.button_last-page');
 const modalWindow = document.querySelector('.modal');
 const modalWindowCloseBtn = document.querySelector('.modal__close-button');
 
+const defaultQuery = window.matchMedia('(min-width: 1280px)');
+const desktopQuery = window.matchMedia('(max-width: 1279px)');
+const tabletQuery = window.matchMedia('(max-width: 767px)');
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (defaultQuery.matches) updatesPetsForQuery(8);
+    if (desktopQuery.matches) updatesPetsForQuery(6);
+    if (tabletQuery.matches) updatesPetsForQuery(3);
+})
 // adaptive menu creation
 
 const closeHamburgerMenu = () => {
@@ -182,6 +192,27 @@ lastBtn.addEventListener('click', () => {
         disableButtonsStyles('next');
     }
 })
+
+// adaptive pagination
+
+const updatesPetsForQuery = (items) => {
+    itemsOnPage = items;
+    updatePets();
+    pages = indexesArr.length / itemsOnPage;
+    updatePage();
+}
+
+defaultQuery.addListener(e => {
+    if (e.matches) updatesPetsForQuery(8);
+});
+
+desktopQuery.addListener(e => {
+    if (e.matches) updatesPetsForQuery(6);
+});
+
+tabletQuery.addListener(e => {
+    if (e.matches) updatesPetsForQuery(3);
+});
 
 
 // pagination
