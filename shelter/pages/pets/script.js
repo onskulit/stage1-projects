@@ -6,8 +6,10 @@ const navItems = document.querySelectorAll('.nav__item');
 const backdrop = document.querySelector('.backdrop');
 
 const petsContainer = document.querySelector('.pets');
-const prevBtn = document.querySelector('.button_prev');
-const nextBtn = document.querySelector('.button_next');
+const prevBtn = document.querySelector('.button_prev-page');
+const nextBtn = document.querySelector('.button_next-page');
+const firstBtn = document.querySelector('.button_first-page');
+const lastBtn = document.querySelector('.button_last-page');
 
 const modalWindow = document.querySelector('.modal');
 const modalWindowCloseBtn = document.querySelector('.modal__close-button');
@@ -46,13 +48,43 @@ navigation.addEventListener('click', (event) => {
 });
 
 backdrop.addEventListener('click', () => {
-    closeHamburgerMenu();
-    toggleNavLinksTheme();
+    if (navigation.classList.contains('adaptive-menu')) {
+        closeHamburgerMenu();
+        toggleNavLinksTheme();
+    } 
+    if (modalWindow.classList.contains('active')) closeModalWindow();
 });
 
-// pets creation
 
-let uniquePetIndexes = [4, 0, 2, 1, 5, 7, 3, 6];
+// new array creation
+
+let indexesArr = [4, 0, 2, 1, 5, 7, 3, 6];
+
+const createNewIndexes = (requiredLength, arrLength) => {
+    const newIndexes = [];
+
+    for (let i = 0; i < requiredLength; i++) {
+        let index = Math.floor(Math.random() * arrLength);
+
+        while (newIndexes.includes(index)) {
+            index = Math.floor(Math.random() * arrLength);
+        }
+
+        newIndexes.push(index);
+    }
+
+    return newIndexes;
+}
+
+const createIndexesArray = (repeatTimes) => {
+    for (let i = 0; i < repeatTimes; i++) {
+        indexesArr = indexesArr.concat(createNewIndexes(8, pets.length));
+    }
+}
+
+createIndexesArray(5);
+
+// pets creation
 
 const createPetBlock = (pet) => {
     const petBlock = document.createElement('div');
@@ -86,18 +118,101 @@ const createPetBlock = (pet) => {
     return petBlock;
 }
 
+let currentPage = 0;
+let itemsOnPage = 8;
+let pages = indexesArr.length / itemsOnPage;
+
 const updatePets = () => {
+    const startingItem = currentPage * itemsOnPage;
+    let indexes = indexesArr.slice(startingItem, startingItem + itemsOnPage);
+
     petsContainer.innerHTML = '';
 
-    uniquePetIndexes.forEach(index => createPetBlock(pets[index]));
+    indexes.forEach(index => createPetBlock(pets[index]));
 }
-
-
 
 updatePets();
 
-prevBtn.addEventListener('click', updatePets);
-nextBtn.addEventListener('click', updatePets);
+prevBtn.addEventListener('click', () => {
+    if(!prevBtn.classList.contains('button_inactive')) {
+        if (currentPage + 1 === pages) enableButtonStyles('next');
+
+        currentPage--;
+        updatePets();
+        updatePage();
+
+        if (currentPage === 0) {
+            disableButtonsStyles('prev');
+        }
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    if(!nextBtn.classList.contains('button_inactive')) {
+        if (currentPage === 0) enableButtonStyles('prev');
+
+        currentPage++;
+        updatePets();
+        updatePage();
+
+        if (currentPage + 1 === pages) {
+            disableButtonsStyles('next');
+        }
+    }
+});
+
+firstBtn.addEventListener('click', () => {
+    if(!firstBtn.classList.contains('button_inactive')) {
+        if (currentPage + 1 === pages) enableButtonStyles('next');
+
+        currentPage = 0;
+        updatePets();
+        updatePage();
+        disableButtonsStyles('prev');
+    }
+})
+
+lastBtn.addEventListener('click', () => {
+    if(!lastBtn.classList.contains('button_inactive')) {
+        if (currentPage === 0) enableButtonStyles('prev');
+
+        currentPage = pages - 1;
+        updatePets();
+        updatePage();
+        disableButtonsStyles('next');
+    }
+})
+
+
+// pagination
+
+const enableButtonStyles = (buttonsType) => {
+    switch (buttonsType) {
+        case 'prev':
+            prevBtn.classList.remove('button_inactive');
+            firstBtn.classList.remove('button_inactive');
+            break;
+        case 'next':
+            nextBtn.classList.remove('button_inactive');
+            lastBtn.classList.remove('button_inactive');
+    }
+}
+
+const disableButtonsStyles = (buttonsType) => {
+    switch (buttonsType) {
+        case 'prev':
+            prevBtn.classList.add('button_inactive');
+            firstBtn.classList.add('button_inactive');
+            break;
+        case 'next':
+            nextBtn.classList.add('button_inactive');
+            lastBtn.classList.add('button_inactive');
+    }
+}
+
+const updatePage = () => {
+    document.querySelector('.current-page').textContent = currentPage + 1;
+}
 
 // modal window
 
