@@ -197,8 +197,13 @@ lastBtn.addEventListener('click', () => {
 
 const updatesPetsForQuery = (items) => {
     itemsOnPage = items;
-    updatePets();
     pages = indexesArr.length / itemsOnPage;
+
+    if (currentPage + 1 > pages) {
+        currentPage = pages - 1;
+    }
+    
+    updatePets();
     updatePage();
 }
 
