@@ -34,14 +34,16 @@ const closeHamburgerMenu = () => {
 };
 
 const toggleNavLinksTheme = () => {
-    navItems.forEach(item => {
-        item.classList.toggle('nav__item_dark');
-        item.classList.toggle('nav__item_light');
-        if (item.classList.contains('nav__item_light_active') || item.classList.contains('nav__item_dark_active')) {
-            item.classList.toggle('nav__item_dark_active');
-            item.classList.toggle('nav__item_light_active');
-        }
-    })
+    if(tabletQuery.matches) {
+        navItems.forEach(item => {
+            item.classList.toggle('nav__item_dark');
+            item.classList.toggle('nav__item_light');
+            if (item.classList.contains('nav__item_light_active') || item.classList.contains('nav__item_dark_active')) {
+                item.classList.toggle('nav__item_dark_active');
+                item.classList.toggle('nav__item_light_active');
+            }
+        })
+    }
 }
 
 hamburgerIcon.addEventListener('click', () => {

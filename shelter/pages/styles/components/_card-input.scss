@@ -5,12 +5,13 @@
     @include font(2rem, 23px, $color-dark-l);
     text-align: end;
     letter-spacing: $letter-spacing;
-    background: url(../../../assets/icons/credit-card.svg);
+    background-image: url(../../../assets/icons/credit-card.svg);
     background-repeat: no-repeat;
     background-position: 15px 10px;
     background-color: $color-primary;
     border: none;
     border-radius: 9px;
+    cursor: pointer;
 
     @media (max-width: $tablet) {
         width: 281px;

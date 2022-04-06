@@ -33,6 +33,12 @@
     &_active {
         background: $color-primary;
         cursor: initial;
+
+        &:hover {
+            border: 2px solid $color-primary;
+            background: $color-primary;
+            cursor: initial;
+        }
     }
 
     &_inactive {

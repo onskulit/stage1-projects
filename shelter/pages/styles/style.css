@@ -359,13 +359,15 @@ html {
 }
 
 body {
-  max-width: 1280px;
-  margin: 0 auto;
+  background-color: #F6F6F6;
 }
 
 .container {
+  max-width: 1280px;
+  margin: 0 auto;
   position: relative;
   overflow-x: hidden;
+  background-color: #FFFFFF;
 }
 
 .wrapper {
@@ -657,6 +659,11 @@ h5 {
   background: #F1CDB3;
   cursor: initial;
 }
+.button_active:hover {
+  border: 2px solid #F1CDB3;
+  background: #F1CDB3;
+  cursor: initial;
+}
 .button_inactive {
   color: #CDCDCD;
   border-color: #CDCDCD;
@@ -680,11 +687,13 @@ h5 {
   color: #545454;
   text-align: end;
   letter-spacing: 0.06em;
-  background: url(/assets/icons/credit-card.svg) no-repeat;
+  background-image: url(../../../assets/icons/credit-card.svg);
+  background-repeat: no-repeat;
   background-position: 15px 10px;
   background-color: #F1CDB3;
   border: none;
   border-radius: 9px;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .card-input {
@@ -1275,12 +1284,11 @@ h5 {
 }
 
 .help__list {
-  padding: 0 87px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 48px;
+  gap: 55px;
   flex-wrap: wrap;
 }
 @media (max-width: 1279px) {
@@ -1297,7 +1305,7 @@ h5 {
 }
 
 .help-item {
-  width: 16.2%;
+  width: 170px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -4,8 +4,7 @@
 }
 
 .help__list {
-    padding: 0 87px;
-    @include flex($gap: 48px, $justify-content: center);
+    @include flex($gap: 55px, $justify-content: center);
 
     @media (max-width: $desktop) {
         padding: 0 39px;
@@ -20,7 +19,7 @@
 }
 
 .help-item {
-    width: 16.2%;   
+    width: 170px;   
     @include flex(30px, $flex-direction: column, $align-items: center, $justify-content: center, $wrap: nowrap);
 
     @media (max-width: $desktop) {
