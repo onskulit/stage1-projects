@@ -16,6 +16,7 @@ const modalWindowCloseBtn = document.querySelector('.modal__close-button');
 
 const defaultQuery = window.matchMedia('(min-width: 1280px)');
 const desktopQuery = window.matchMedia('(max-width: 1279px)');
+const desktopQueryMin = window.matchMedia('(min-width: 768px)');
 const tabletQuery = window.matchMedia('(max-width: 767px)');
 
 
@@ -141,8 +142,6 @@ const updatePets = () => {
     indexes.forEach(index => createPetBlock(pets[index]));
 }
 
-updatePets();
-
 prevBtn.addEventListener('click', () => {
     if(!prevBtn.classList.contains('button_inactive')) {
         if (currentPage + 1 === pages) enableButtonStyles('next');
@@ -197,7 +196,10 @@ lastBtn.addEventListener('click', () => {
 
 const updatesPetsForQuery = (items) => {
     itemsOnPage = items;
+
     pages = indexesArr.length / itemsOnPage;
+
+    if (currentPage < pages && lastBtn.classList.contains('button_inactive')) enableButtonStyles('next');
 
     if (currentPage + 1 > pages) {
         currentPage = pages - 1;
@@ -212,7 +214,15 @@ defaultQuery.addListener(e => {
 });
 
 desktopQuery.addListener(e => {
-    if (e.matches) updatesPetsForQuery(6);
+    if (e.matches) {
+        updatesPetsForQuery(6);
+    } 
+});
+
+desktopQueryMin.addListener(e => {
+    if (e.matches) {
+        updatesPetsForQuery(6);
+    } 
 });
 
 tabletQuery.addListener(e => {
