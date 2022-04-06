@@ -5,7 +5,8 @@
     @include font(2rem, 23px, $color-dark-l);
     text-align: end;
     letter-spacing: $letter-spacing;
-    background-image: url(../../../assets/icons/credit-card.svg);
+    background-image: url(../../../assets/icons/credit-card-ico.svg);
+    background-size: 30px 23px;
     background-repeat: no-repeat;
     background-position: 15px 10px;
     background-color: $color-primary;

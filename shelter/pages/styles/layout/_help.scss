@@ -19,7 +19,7 @@
 }
 
 .help-item {
-    width: 170px;   
+    width: 180px;   
     @include flex(30px, $flex-direction: column, $align-items: center, $justify-content: center, $wrap: nowrap);
 
     @media (max-width: $desktop) {
