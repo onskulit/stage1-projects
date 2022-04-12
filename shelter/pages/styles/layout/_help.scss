@@ -31,3 +31,9 @@
         width: 130px;
     }
 }
+
+.help-item__img {
+    @media (max-width: $tablet) {
+        width: 50px;
+    }
+}
