@@ -32,6 +32,32 @@
     }
 }
 
+.help-item:nth-of-type(3) {
+    padding-right: 15px;
+}
+
+.help-item:nth-of-type(4) {
+    padding-right: 26px;
+}
+
+.help-item:nth-of-type(5) {
+    padding-right: 10px;
+}
+
+.help-item:nth-of-type(6) {
+    padding-right: 120px;
+}
+
+.help-item:nth-of-type(7) {
+    width: 115px;
+    padding-right: 110px;
+}
+
+.help-item:nth-of-type(9) {
+    width: 200px;
+    padding-left: 55px;
+}
+
 .help-item__img {
     @media (max-width: $tablet) {
         width: 50px;

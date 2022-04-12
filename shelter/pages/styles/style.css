@@ -1149,7 +1149,7 @@ h5 {
   flex-wrap: wrap;
 }
 .our-friends__container_our-pets-page {
-  gap: 45px;
+  gap: 60px;
 }
 @media (max-width: 767px) {
   .our-friends__container {
@@ -1167,14 +1167,15 @@ h5 {
   flex-wrap: wrap;
   transition: 0.3s;
 }
-.pets_our-pets-page {
-  gap: 30px;
-}
 @media (max-width: 1279px) {
   .pets {
     gap: 40px;
     justify-content: center;
   }
+}
+.pets_our-pets-page {
+  gap: 30px;
+  justify-content: space-between;
 }
 
 .pet {
@@ -1323,6 +1324,38 @@ h5 {
   .help-item {
     gap: 20px;
     width: 130px;
+  }
+}
+
+.help-item:nth-of-type(3) {
+  padding-right: 15px;
+}
+
+.help-item:nth-of-type(4) {
+  padding-right: 26px;
+}
+
+.help-item:nth-of-type(5) {
+  padding-right: 10px;
+}
+
+.help-item:nth-of-type(6) {
+  padding-right: 120px;
+}
+
+.help-item:nth-of-type(7) {
+  width: 115px;
+  padding-right: 110px;
+}
+
+.help-item:nth-of-type(9) {
+  width: 200px;
+  padding-left: 55px;
+}
+
+@media (max-width: 767px) {
+  .help-item__img {
+    width: 50px;
   }
 }
 
