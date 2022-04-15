@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     petsContainer.innerHTML = '';
 
     createPetBlock(pets[4]);
-    createPetBlock(pets[0]).classList.add('desktop_hidden');
-    createPetBlock(pets[2]).classList.add('tablet_hidden');
+    createPetBlock(pets[0]).classList.add('tablet_hidden');
+    createPetBlock(pets[2]).classList.add('desktop_hidden');
 })
 
 // adaptive menu creation
@@ -87,8 +87,8 @@ const updatePets = () => {
     updateUniqueIndexes(3, pets.length);
 
     createPetBlock(pets[uniquePetIndexes[0]]);
-    createPetBlock(pets[uniquePetIndexes[1]]).classList.add('desktop_hidden');
-    createPetBlock(pets[uniquePetIndexes[2]]).classList.add('tablet_hidden');
+    createPetBlock(pets[uniquePetIndexes[1]]).classList.add('tablet_hidden');
+    createPetBlock(pets[uniquePetIndexes[2]]).classList.add('desktop_hidden');
 }
 
 const updateUniqueIndexes = (requiredLength, arrLength) => {

@@ -4,6 +4,10 @@
     @media (max-width: $desktop) {
         @include flex(100px, $justify-content: center, $flex-direction: center, $align-items: center);
     }
+
+    @media (max-width: $tablet) {
+        gap: 105px;
+    }
 }
 
 .start-screen__content {
@@ -13,9 +17,12 @@
 
     @media (max-width: $desktop) {
         margin-top: 30px;
+        
     }
 
     @media (max-width: $tablet) {
+        margin-left: -15px;
+        width: 295px;
         align-items: center;
     }
 }
@@ -23,11 +30,18 @@
 .start-screen__img {
     @media (max-width: $desktop) {
         width: 569px;
-        margin-left: 70px;
+        margin-left: 140px;
     }
 
     @media (max-width: $tablet) {
         width: 260px;
         margin-left: 40px;
+    }
+}
+
+.start-screen__button-container {
+    @media (max-width: $desktop) {
+        width: 100%;
+        text-align: center;
     }
 }

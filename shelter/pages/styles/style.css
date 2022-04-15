@@ -622,7 +622,7 @@ h5 {
   height: 52px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.7rem;
-  line-height: 22px;
+  line-height: inherit;
   font-weight: 400;
   font-style: normal;
   color: #292929;
@@ -649,6 +649,7 @@ h5 {
   background: transparent;
 }
 .button-colored {
+  border: none;
   background: #F1CDB3;
 }
 .button:hover {
@@ -1004,7 +1005,7 @@ h5 {
     display: block;
     z-index: 2;
     width: 50px;
-    margin-right: 40px;
+    margin-right: 35px;
     transition: 0.3s;
   }
 }
@@ -1012,7 +1013,7 @@ h5 {
   width: 30px;
   height: 2px;
   display: block;
-  margin: 11px auto;
+  margin: 9px auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1046,6 +1047,11 @@ h5 {
     flex-wrap: wrap;
   }
 }
+@media (max-width: 767px) {
+  .start-screen__container {
+    gap: 105px;
+  }
+}
 
 .start-screen__content {
   width: 460px;
@@ -1064,6 +1070,8 @@ h5 {
 }
 @media (max-width: 767px) {
   .start-screen__content {
+    margin-left: -15px;
+    width: 295px;
     align-items: center;
   }
 }
@@ -1071,13 +1079,20 @@ h5 {
 @media (max-width: 1279px) {
   .start-screen__img {
     width: 569px;
-    margin-left: 70px;
+    margin-left: 140px;
   }
 }
 @media (max-width: 767px) {
   .start-screen__img {
     width: 260px;
     margin-left: 40px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .start-screen__button-container {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -1148,17 +1163,28 @@ h5 {
   gap: 60px;
   flex-wrap: wrap;
 }
-.our-friends__container_our-pets-page {
-  gap: 60px;
-}
 @media (max-width: 767px) {
   .our-friends__container {
     gap: 42px;
   }
 }
+.our-friends__container_our-pets-page {
+  gap: 60px;
+}
+@media (max-width: 1279px) {
+  .our-friends__container_our-pets-page {
+    gap: 30px;
+    padding-bottom: 75px;
+  }
+}
+@media (max-width: 767px) {
+  .our-friends__container_our-pets-page {
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+}
 
 .pets {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1176,6 +1202,12 @@ h5 {
 .pets_our-pets-page {
   gap: 30px;
   justify-content: space-between;
+}
+@media (max-width: 1279px) {
+  .pets_our-pets-page {
+    gap: 30px;
+    justify-content: center;
+  }
 }
 
 .pet {
@@ -1224,8 +1256,14 @@ h5 {
   gap: 20px;
   flex-wrap: wrap;
 }
+@media (max-width: 1279px) {
+  .controllers {
+    margin-top: 10px;
+  }
+}
 @media (max-width: 767px) {
   .controllers {
+    margin-top: 5px;
     gap: 10px;
   }
 }
@@ -1284,6 +1322,18 @@ h5 {
   gap: 60px;
   flex-wrap: wrap;
 }
+@media (max-width: 1279px) {
+  .help__container {
+    padding-bottom: 40px;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767px) {
+  .help__container {
+    gap: 40px;
+    padding-bottom: 10px;
+  }
+}
 
 .help__list {
   display: flex;
@@ -1302,7 +1352,6 @@ h5 {
 @media (max-width: 767px) {
   .help__list {
     padding: 0 5px;
-    gap: 30px;
   }
 }
 
@@ -1317,11 +1366,13 @@ h5 {
 }
 @media (max-width: 1279px) {
   .help-item {
+    padding: 0 0 55px 0;
     width: 170px;
   }
 }
 @media (max-width: 767px) {
   .help-item {
+    padding: 0 0 30px 0;
     gap: 20px;
     width: 130px;
   }
@@ -1329,6 +1380,11 @@ h5 {
 
 .help-item:nth-of-type(6), .help-item:nth-of-type(7), .help-item:nth-of-type(8), .help-item:nth-of-type(9) {
   padding-top: 55px;
+}
+@media (max-width: 1279px) {
+  .help-item:nth-of-type(6), .help-item:nth-of-type(7), .help-item:nth-of-type(8), .help-item:nth-of-type(9) {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1390,6 +1446,7 @@ h5 {
 }
 @media (max-width: 1279px) {
   .footer__container {
+    padding-top: 15px;
     gap: 60px;
     justify-content: center;
   }
@@ -1398,7 +1455,7 @@ h5 {
   .footer__container {
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 25px;
   }
 }
 
@@ -1416,6 +1473,11 @@ h5 {
 }
 .footer__content_address {
   gap: 33px;
+}
+@media (max-width: 767px) {
+  .footer__content_address {
+    gap: 40px;
+  }
 }
 @media (max-width: 767px) {
   .footer__content {
@@ -1446,7 +1508,14 @@ h5 {
 
 @media (max-width: 767px) {
   .footer__image {
+    margin-top: 15px;
     width: 260px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__adress-link {
+    margin-right: 25px;
   }
 }
 

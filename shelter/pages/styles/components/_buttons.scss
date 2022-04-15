@@ -1,6 +1,6 @@
 .button {
     height: 52px;
-    @include font(1.7rem, 22px, $color-dark-3xl);
+    @include font(1.7rem, inherit, $color-dark-3xl);
     letter-spacing: $letter-spacing;
     border: 2px solid $color-primary;
     transition: $light-transition;
@@ -22,6 +22,7 @@
     }
 
     &-colored {
+        border: none;
         background: $color-primary;
     }
 
