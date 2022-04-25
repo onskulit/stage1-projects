@@ -93,8 +93,34 @@ const createNewIndexes = (requiredLength, arrLength) => {
 
 const createIndexesArray = (repeatTimes) => {
     for (let i = 0; i < repeatTimes; i++) {
-        indexesArr = indexesArr.concat(createNewIndexes(8, pets.length));
+        indexesArr.push(createNewIndexes(8, pets.length));
     }
+
+    for (let i = 0; i < indexesArr.length; i++) {
+        if (i > 0) {
+            for (let j = 0; j < 5; j++) {
+                const group = indexesArr[i];
+                const prevGroup = indexesArr[i - 1];
+                function checkPosition(element) {
+                    const distance = j + (8 - prevGroup.indexOf(group[j]));
+                    if (distance < 7) {
+                        let forReplacement = group[j + 7 - distance];
+                        group[j + 7 - distance] = group[j];
+                        group[j] = forReplacement;
+                        checkPosition(group[j]);
+                    }
+                };
+                checkPosition(group[j]);
+            }
+        }
+    }
+
+    let currentArr = [];
+    for (let arr of indexesArr) {
+        currentArr = currentArr.concat(arr);
+    }
+    
+    indexesArr = currentArr;
 }
 
 createIndexesArray(6);
@@ -134,7 +160,7 @@ const createPetBlock = (pet) => {
 }
 
 let currentPage = 0;
-let itemsOnPage;
+let itemsOnPage = 8;
 let pages = indexesArr.length / itemsOnPage;
 
 const updatePets = () => {
