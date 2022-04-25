@@ -361,6 +361,12 @@ html {
 body {
   background-color: #F6F6F6;
 }
+body.disable-scroll {
+  overflow: hidden;
+  /* .container {
+      padding-right: 7px;
+  } */
+}
 
 .container {
   max-width: 1280px;
@@ -940,13 +946,13 @@ h5 {
   .nav__list {
     position: absolute;
     top: -15px;
-    right: -80%;
-    width: 80%;
-    height: 807px;
-    padding: 248px 0 0 0;
+    right: -320px;
+    width: 320px;
+    padding: 248px 0 300px 0;
     z-index: 2;
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
     gap: 40px;
     font-size: 32px;
     line-height: 51px;
@@ -956,12 +962,14 @@ h5 {
 }
 @media (max-width: 320px) {
   .nav__list {
-    right: -100%;
-    width: 100%;
+    right: -320px;
+    width: 320px;
   }
 }
 .nav__list.adaptive-menu {
   right: 0;
+  height: 0;
+  overflow-y: auto;
 }
 
 .nav__item {
@@ -1184,14 +1192,25 @@ h5 {
   }
 }
 
+.pets-wrapper {
+  width: 80%;
+  display: flex;
+  overflow-x: hidden;
+}
+
 .pets {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 90px;
-  flex-wrap: wrap;
-  transition: 0.3s;
+  flex-wrap: nowrap;
+  transition: 0.1s;
+  height: 434.72px;
+  /* &.hidden {
+      width: 0px;
+  } */
 }
 @media (max-width: 1279px) {
   .pets {
@@ -1200,8 +1219,10 @@ h5 {
   }
 }
 .pets_our-pets-page {
+  height: auto;
   gap: 30px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 @media (max-width: 1279px) {
   .pets_our-pets-page {

@@ -31,6 +31,7 @@ const closeHamburgerMenu = () => {
     hamburgerIcon.classList.remove('active');
     navigation.classList.remove('adaptive-menu');
     backdrop.classList.remove('active');
+    document.body.classList.remove('disable-scroll');
 };
 
 const toggleNavLinksTheme = () => {
@@ -50,6 +51,7 @@ hamburgerIcon.addEventListener('click', () => {
     hamburgerIcon.classList.toggle('active');
     navigation.classList.toggle('adaptive-menu');
     backdrop.classList.toggle('active');
+    document.body.classList.toggle('disable-scroll');
     toggleNavLinksTheme();
 }); 
 
@@ -71,7 +73,7 @@ backdrop.addEventListener('click', () => {
 
 // new array creation
 
-let indexesArr = [4, 0, 2, 1, 5, 7, 3, 6];
+let indexesArr = [];
 
 const createNewIndexes = (requiredLength, arrLength) => {
     const newIndexes = [];
@@ -95,7 +97,7 @@ const createIndexesArray = (repeatTimes) => {
     }
 }
 
-createIndexesArray(5);
+createIndexesArray(6);
 
 // pets creation
 
@@ -132,7 +134,7 @@ const createPetBlock = (pet) => {
 }
 
 let currentPage = 0;
-let itemsOnPage = 8;
+let itemsOnPage;
 let pages = indexesArr.length / itemsOnPage;
 
 const updatePets = () => {
@@ -297,11 +299,13 @@ const createModalWindow = (pet) => {
 const openModalWindow = () => {
     modalWindow.classList.add('active');
     backdrop.classList.add('active');
+    document.body.classList.add('disable-scroll');
 }
 
 const closeModalWindow = () => {
     modalWindow.classList.remove('active');
     backdrop.classList.remove('active');
+    document.body.classList.remove('disable-scroll');
 }
 
 modalWindowCloseBtn.addEventListener('click', closeModalWindow);

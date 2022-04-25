@@ -2,7 +2,8 @@ import pets from '../scripts/pets.js';
 
 const hamburgerIcon = document.querySelector('.hamburger');
 const navigation = document.querySelector('.nav__list');
-const backdrop = document.querySelector('.backdrop');
+const backdrop = document.querySelector('.backdrop'); 
+const html = document.querySelector('html');
 
 const petsContainer = document.querySelector('.pets');
 const prevBtns = document.querySelectorAll('.button_prev');
@@ -13,10 +14,7 @@ const modalWindowCloseBtn = document.querySelector('.modal__close-button');
 
 document.addEventListener('DOMContentLoaded', () => {
     petsContainer.innerHTML = '';
-
-    createPetBlock(pets[4]);
-    createPetBlock(pets[0]).classList.add('tablet_hidden');
-    createPetBlock(pets[2]).classList.add('desktop_hidden');
+    updatePets();
 })
 
 // adaptive menu creation
@@ -25,12 +23,14 @@ const closeHamburgerMenu = () => {
     hamburgerIcon.classList.remove('active');
     navigation.classList.remove('adaptive-menu');
     backdrop.classList.remove('active');
+    document.body.classList.remove('disable-scroll');
 };
 
 hamburgerIcon.addEventListener('click', () => {
     hamburgerIcon.classList.toggle('active');
     navigation.classList.toggle('adaptive-menu');
     backdrop.classList.toggle('active');
+    document.body.classList.toggle('disable-scroll');
 }); 
 
 navigation.addEventListener('click', (event) => {
@@ -80,15 +80,19 @@ const createPetBlock = (pet) => {
     return petBlock;
 }
 
-
-const updatePets = () => {
+const updatePets = (animationDirection = 'center') => {
+    document.querySelector('.pets-wrapper').style.justifyContent = animationDirection;
+    petsContainer.style.width = "0";
     petsContainer.innerHTML = '';
 
     updateUniqueIndexes(3, pets.length);
-
-    createPetBlock(pets[uniquePetIndexes[0]]);
-    createPetBlock(pets[uniquePetIndexes[1]]).classList.add('tablet_hidden');
-    createPetBlock(pets[uniquePetIndexes[2]]).classList.add('desktop_hidden');
+    
+    setTimeout(() => {
+        createPetBlock(pets[uniquePetIndexes[0]]);
+        createPetBlock(pets[uniquePetIndexes[1]]).classList.add('tablet_hidden');
+        createPetBlock(pets[uniquePetIndexes[2]]).classList.add('desktop_hidden');
+        petsContainer.style.width = "100%";
+    }, 100);
 }
 
 const updateUniqueIndexes = (requiredLength, arrLength) => {
@@ -108,11 +112,15 @@ const updateUniqueIndexes = (requiredLength, arrLength) => {
 }
 
 prevBtns.forEach(btn => {
-    btn.addEventListener('click', updatePets);
+    btn.addEventListener('click', () => {
+        updatePets('start');
+    });
 })
 
 nextBtns.forEach(btn => {
-    btn.addEventListener('click', updatePets);
+    btn.addEventListener('click', () => {
+        updatePets('end');
+    });
 })
 
 // modal window
@@ -150,11 +158,14 @@ const createModalWindow = (pet) => {
 const openModalWindow = () => {
     modalWindow.classList.add('active');
     backdrop.classList.add('active');
+    html.classList.add('disable-scroll');
+    document.body.classList.add('disable-scroll');
 }
 
 const closeModalWindow = () => {
     modalWindow.classList.remove('active');
     backdrop.classList.remove('active');
+    document.body.classList.remove('disable-scroll');
 }
 
 modalWindowCloseBtn.addEventListener('click', closeModalWindow);

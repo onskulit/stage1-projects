@@ -7,13 +7,13 @@
     @media (max-width: $tablet) {
         position: absolute;
         top: -15px;
-        right: -80%;
-        width: 80%;
-        height: 807px;
-        padding: 248px 0 0 0;
+        right: -320px;
+        width: 320px;
+        padding: 248px 0 300px 0;
         z-index: 2;
         flex-direction: column;
         align-items: center;
+        flex-wrap: nowrap;
         gap: 40px;
         font-size: 32px;
         line-height: 51px;
@@ -22,12 +22,14 @@
     }
 
     @media (max-width: $mobile) {
-        right: -100%;
-        width: 100%;
+        right: -320px;
+        width: 320px;
     }
 
     &.adaptive-menu {
         right: 0;
+        height: 0;
+        overflow-y: auto;
     }
 }
 

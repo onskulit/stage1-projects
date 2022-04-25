@@ -4,6 +4,13 @@ html {
 
 body {
     background-color: $color-light-l;
+
+    &.disable-scroll {
+        overflow: hidden;
+        /* .container {
+            padding-right: 7px;
+        } */
+    }
 }
 
 .container {

@@ -26,9 +26,17 @@
     }
 }
 
+.pets-wrapper {
+    width: 80%;
+    display: flex;
+    overflow-x: hidden;
+}
+
 .pets {
-    @include flex(90px, $justify-content: center, $align-items: center);
-    transition: $light-transition;
+    width: 100%;
+    @include flex(90px, $justify-content: center, $align-items: center, $wrap: nowrap);
+    transition: 0.1s;
+    height: 434.72px;
     
     @media (max-width: $desktop) {
         gap: 40px;
@@ -36,14 +44,20 @@
     }
 
     &_our-pets-page {
+        height: auto;
         gap: 30px;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         @media (max-width: $desktop) {
             gap: 30px;
             justify-content: center;
         }
     }
+    
+    /* &.hidden {
+        width: 0px;
+    } */
 }
 
 .pet {
