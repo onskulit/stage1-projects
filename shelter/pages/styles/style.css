@@ -947,8 +947,9 @@ h5 {
     position: absolute;
     top: -15px;
     right: -320px;
+    bottom: 0;
     width: 320px;
-    padding: 248px 0 700px 0;
+    padding: 248px 0 4000px 0;
     z-index: 2;
     flex-direction: column;
     align-items: center;
@@ -958,6 +959,10 @@ h5 {
     line-height: 51px;
     background-color: #292929;
     transition: 0.5s;
+  }
+  .nav__list_our-pets-page {
+    background-color: #FFFFFF;
+    padding-bottom: 1800px;
   }
 }
 @media (max-width: 320px) {

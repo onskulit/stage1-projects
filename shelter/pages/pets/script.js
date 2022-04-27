@@ -34,38 +34,22 @@ const closeHamburgerMenu = () => {
     document.body.classList.remove('disable-scroll');
 };
 
-const toggleNavLinksTheme = () => {
-    if(tabletQuery.matches) {
-        navItems.forEach(item => {
-            item.classList.toggle('nav__item_dark');
-            item.classList.toggle('nav__item_light');
-            if (item.classList.contains('nav__item_light_active') || item.classList.contains('nav__item_dark_active')) {
-                item.classList.toggle('nav__item_dark_active');
-                item.classList.toggle('nav__item_light_active');
-            }
-        })
-    }
-}
-
 hamburgerIcon.addEventListener('click', () => {
     hamburgerIcon.classList.toggle('active');
     navigation.classList.toggle('adaptive-menu');
     backdrop.classList.toggle('active');
     document.body.classList.toggle('disable-scroll');
-    toggleNavLinksTheme();
 }); 
 
 navigation.addEventListener('click', (event) => {
     if (event.target.classList.contains('nav__link')) {
         closeHamburgerMenu();
-        toggleNavLinksTheme();
     }
 });
 
 backdrop.addEventListener('click', () => {
     if (navigation.classList.contains('adaptive-menu')) {
         closeHamburgerMenu();
-        toggleNavLinksTheme();
     } 
     if (modalWindow.classList.contains('active')) closeModalWindow();
 });

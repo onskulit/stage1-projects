@@ -8,8 +8,9 @@
         position: absolute;
         top: -15px;
         right: -320px;
+        bottom: 0;
         width: 320px;
-        padding: 248px 0 700px 0;
+        padding: 248px 0 4000px 0;
         z-index: 2;
         flex-direction: column;
         align-items: center;
@@ -19,6 +20,11 @@
         line-height: 51px;
         background-color: $color-dark-3xl;
         transition: $mid-transition;
+
+        &_our-pets-page {
+            background-color: $color-light;
+            padding-bottom: 1800px;
+        }
     }
 
     @media (max-width: $mobile) {
