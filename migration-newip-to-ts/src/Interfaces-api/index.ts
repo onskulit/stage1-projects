@@ -28,7 +28,7 @@ export interface IClassicResponse extends INegativeResponse {
 };
 
 export interface ISource {
-  id: stringOrNull,
+  id: string,
   name: stringOrNull,
   description: stringOrNull,
   url: stringOrNull,
