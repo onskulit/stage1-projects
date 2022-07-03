@@ -7,7 +7,7 @@ enum Method {
     DELETE = 'DELETE',
 }
 
-interface ILoader {
+export interface ILoader {
     baseLink: string;
     options: IOptions;
     getResp({ endpoint, options }: { endpoint: string; options: IOptions }, callback?: () => void): void;
