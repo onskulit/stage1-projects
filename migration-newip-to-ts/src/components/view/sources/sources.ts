@@ -1,7 +1,7 @@
 import { ISource } from './../../../Interfaces-api/index';
 import './sources.css';
 
-interface ISources {
+export interface ISources {
     draw(data: ISource[]): void;
 }
 

@@ -1,7 +1,7 @@
 import { IArticle } from './../../../Interfaces-api/index';
 import './news.css';
 
-interface INews {
+export interface INews {
     draw(data: IArticle[]): void;
 }
 

@@ -21,7 +21,7 @@ export interface IArticle {
   content: stringOrNull
 }
 
-export interface IClassicResponse extends INegativeResponse { 
+export interface INewsResponse extends INegativeResponse { 
   status: statusType,
   totalResults?: number,
   articles?: IArticle[],
