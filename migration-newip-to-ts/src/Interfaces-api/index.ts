@@ -21,6 +21,13 @@ export interface IArticle {
   content: stringOrNull
 }
 
+export interface IResponse extends INegativeResponse {
+  status: statusType,
+  totalResults?: number,
+  articles?: IArticle[],
+  sources?: ISource[],
+}
+
 export interface INewsResponse extends INegativeResponse { 
   status: statusType,
   totalResults?: number,
@@ -40,6 +47,21 @@ export interface ISourcesResponse extends INegativeResponse {
   status: statusType,
   sources?: ISource[],
 };
+
+export interface IOptions {
+  apiKey?: string;
+  q?: string;
+  searchIn?: string;
+  sources?: string;
+  domains?: string;
+  excludeDomains?: string;
+  from?: string;
+  to?: string;
+  language?: string;
+  sortBy?: string;
+  pageSize?: string;
+  page?: string;
+}
 
 /* const Response: IResponse = {
     status: 'error',
