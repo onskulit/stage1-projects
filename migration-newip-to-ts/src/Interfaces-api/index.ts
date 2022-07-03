@@ -1,12 +1,13 @@
 type statusType = 'ok' | 'error';
-type stringOrNull = string | null;
+export type stringOrNull = string | null;
+export type HTMLElementOrNull = HTMLElement | null;
 
 interface INegativeResponse {
   code?: string,
   message?: string,
 }
 
-interface IArticle {
+export interface IArticle {
   source: {
     id: stringOrNull,
     name: stringOrNull,
@@ -14,9 +15,9 @@ interface IArticle {
   author: stringOrNull,
   title: stringOrNull,
   description: stringOrNull,
-  url: stringOrNull,
+  url: string,
   urlToImage: stringOrNull,
-  publishedAt: stringOrNull,
+  publishedAt: string,
   content: stringOrNull
 }
 
@@ -26,7 +27,7 @@ export interface IClassicResponse extends INegativeResponse {
   articles?: IArticle[],
 };
 
-interface ISource {
+export interface ISource {
   id: stringOrNull,
   name: stringOrNull,
   description: stringOrNull,
