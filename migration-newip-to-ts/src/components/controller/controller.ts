@@ -1,13 +1,14 @@
 import AppLoader from './appLoader';
 import { ILoader } from './loader';
+import { INewsResponse, ISourcesResponse } from '../../Interfaces-api/index';
 
-interface IController extends ILoader {
-    getSources(callback: () => void): void;
-    getNews(e: Event, callback: () => void): void;
+export interface IController extends ILoader {
+    getSources(callback: (data?: ISourcesResponse) => void): void;
+    getNews(e: Event, callback: (data?: INewsResponse) => void): void;
 }
 
 class AppController extends AppLoader implements IController {
-    getSources(callback: () => void): void {
+    getSources(callback: (data?: ISourcesResponse) => void): void {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -16,7 +17,7 @@ class AppController extends AppLoader implements IController {
         );
     }
 
-    getNews(e: Event, callback: () => void): void {
+    getNews(e: Event, callback: (data?: INewsResponse) => void): void {
         let target = e.target as HTMLElement;
         const newsContainer = e.currentTarget as HTMLElement;
 
