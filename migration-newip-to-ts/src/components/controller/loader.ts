@@ -10,7 +10,7 @@ enum Method {
 export interface ILoader {
     baseLink: string;
     options: IOptions;
-    getResp({ endpoint, options }: { endpoint: string; options: IOptions }, callback?: () => void): void;
+    getResp({ endpoint, options }: { endpoint: string; options?: IOptions }, callback?: () => void): void;
     errorHandler(res: Response): void;
     makeUrl(endpoint: string, options?: IOptions): string;
     load(method: string, endpoint: string, callback: (data: unknown) => void, options: IOptions): void;
@@ -26,7 +26,7 @@ class Loader implements ILoader {
     }
 
     getResp(
-        { endpoint, options = {} }: { endpoint: string; options: IOptions },
+        { endpoint, options = {} }: { endpoint: string; options?: IOptions },
         callback = (): void => {
             console.error('No callback for GET response');
         }
