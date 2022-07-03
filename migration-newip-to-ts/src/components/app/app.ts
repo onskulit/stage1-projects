@@ -1,7 +1,7 @@
 import AppController, { IController } from '../controller/controller';
 import { AppView, IAppView } from '../view/appView';
 
-interface IApp {
+export interface IApp {
     controller: IController;
     view: IAppView;
     start(): void;
