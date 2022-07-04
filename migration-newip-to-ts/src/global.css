@@ -1,3 +1,7 @@
+html {
+    font-size: 10px;
+}
+
 body {
     color: #fff;
     background: #17181c;
@@ -9,7 +13,7 @@ header {
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 800;
 }
 
@@ -19,17 +23,32 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
 footer .copyright {
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #333;
     text-align: center;
 }
+
 footer .copyright a {
     color: #444;
 }
+
 footer .copyright a:hover {
     color: #555;
 }
+
 footer .copyright:before {
     content: '©';
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 10px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        font-weight: 800;
+    }
 }

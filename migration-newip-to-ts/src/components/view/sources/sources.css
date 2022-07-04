@@ -29,6 +29,22 @@
 }
 
 .source__item-name {
+    font-size: 1.6rem;
     font-weight: 400;
     white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .sources {
+        height: 60px;
+    }
+
+    .source__item-name {
+        font-size: 1.4rem;
+    }
+
+    .source__item {
+        margin: 0.25em;
+        padding: 0.5em 1em;
+    }
 }
