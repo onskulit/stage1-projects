@@ -22,19 +22,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-footer .copyright {
+    gap: 1rem;
     font-size: 1.4rem;
     color: #333;
     text-align: center;
 }
 
-footer .copyright a {
+footer a {
     color: #444;
 }
 
-footer .copyright a:hover {
+footer a:hover {
     color: #555;
 }
 
